@@ -9,8 +9,16 @@
 .DS_Store
 
 # Idea
-.idea
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio
+.vs/
+bin/
+obj/
 
 # NodeJS
-node_modules
+node_modules/
 
