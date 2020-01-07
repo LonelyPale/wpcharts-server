@@ -1,0 +1,49 @@
+10.100.120.74 nodejs 服务
+
+1、安装目录：/usr/nodeImageService
+
+2、运行：
+cd /usr/nodeImageService
+node_modules/pm2/bin/pm2 start ./start.js
+查看服务运行状态: node_modules/pm2/bin/pm2 list
+
+3、关闭：
+cd /usr/nodeImageService
+node_modules/pm2/bin/pm2 stop all
+
+4、配置：
+4-1、Java 服务器 (修改后需要重启服务才能生效)
+修改 sky2/src/main/resources/application.yml
+
+# Image Service node convert 图像服务: 生成 svg、png、emf
+ImageService:
+  node: http://10.100.120.74:8888
+
+修改为 node 图像服务器的 ip 和 port
+
+4-2、Node 服务器 (修改后需要重启服务才能生效)
+修改 /usr/nodeImageService/src/config.js
+
+//# sky2 服务
+const hostname = 'http://10.100.120.74:9090/'; // sky2 服务器
+const loginname = 'Administrator'; //sky2 帐号
+const password = md5.update('Administrator123').digest('hex'); // sky2 密码
+
+修改为 java 服务器的 ip 和 port，还有可登录查询数据的帐号和密码。
+
+4-3、.Net 服务器 (修改后需要重启服务才能生效)
+修改 /usr/nodeImageService/src/config.js
+const svg2emfServer = 'http://10.100.120.51:8889'; //svg2emf 服务器
+修改为 .net 服务器的 ip 和 port 即可
+
+
+
+10.100.120.51 .net 服务
+
+1、安装目录：桌面 Svg2EmfServer 文件夹
+
+2、运行：运行 Svg2EmfServer 目录内的 start.bat 文件
+
+3、关闭：关闭打开的命令行窗口
+
+4、注意：在51服务器上，用远程桌面打开程序，关闭远程桌面后程序也会被关闭，添加到服务后就不会了。

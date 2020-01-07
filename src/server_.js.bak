@@ -1,0 +1,271 @@
+const fs = require("fs");
+const express = require('express');
+const bodyParser = require('body-parser');
+const jsdom = require('jsdom');
+const fetch = require('node-fetch');
+const formurlencoded = require('form-urlencoded').default;
+
+const svg2png = require("./svg2png");
+const config = require("./config");
+
+//const hy = require('./plugins/d3.hydrograph');
+const wpcharts = require('../lib/wpcharts.node.js');
+wpcharts.config.debug = true;
+wpcharts.config.type = 'native';
+
+const app = express();//console.log(module, exports, global, this);
+
+app.use(bodyParser.urlencoded({extended: false}));// parse application/x-www-form-urlencoded
+app.use(bodyParser.json());// parse application/json
+
+//const style = fs.readFileSync('./plugins/d3.hydrograph.css').toString();
+const style = fs.readFileSync('./lib/wpcharts.css').toString();
+
+const port = 8888;
+const server_ = app.listen(port, function () {
+    const server_host = server_.address().address;
+    const server_port = server_.address().port;
+
+    console.log("Server running at http://%s:%s", server_host, server_port);
+    //console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+app.all('*', function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET,POST,OPTIONS,PUT,DELETE");
+    res.header("Access-Control-Allow-Headers", "Authorization, Content-Type, Depth, User-Agent, X-File-Size, X-Requested-With, X-Requested-By, If-Modified-Since, X-File-Name, X-File-Type, Cache-Control, Origin");
+    res.header("Access-Control-Expose-Headers", "Authorization");
+    //res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    //res.header("X-Powered-By",' 3.2.1')
+    //res.header("Content-Type", "application/json;charset=utf-8");
+    next();
+});
+
+//test get post ...
+app.all('/test', function (req, res) {
+    const method = req.method;
+    console.log(method);
+    if (method !== 'GET' && method !== 'POST') return res.end();
+
+    let content = req.body;
+    console.log(typeof content, JSON.stringify(content));
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+    res.send(content);
+});
+
+//test
+app.all('/svg2png', function (request, response) {
+    const method = request.method;
+    if (method !== 'GET' && method !== 'POST') return response.end();
+
+    let dataBuffer = fs.readFileSync("./data/test.svg");
+    svg2png.toBuffer(dataBuffer, (data) => {
+        response.statusCode = 200;
+        response.setHeader("Content-Type", "image/png");
+        //response.setHeader('Content-Type', 'image/svg+xml');
+        //response.setHeader("Content-Disposition", "attachment;filename=wpcharts.png");
+        response.end(data);
+    });
+
+});
+
+//test
+app.all('/svg2emf', function (request, response) {
+    const method = request.method;
+    if (method !== 'GET' && method !== 'POST') return response.end();
+
+    let dataBuffer = fs.readFileSync("./data/过程线.emf");
+    response.statusCode = 200;
+    //response.setHeader("Content-Type", "application/x-msmetafile");
+    response.setHeader("Content-Type", "application/octet-stream");
+    response.setHeader("Content-Disposition", "attachment;filename=wpcharts.emf");
+    response.end(dataBuffer);
+
+});
+
+app.post('/hydrograph', function (req, res) {
+    const dom = new jsdom.JSDOM();
+    const document = dom.window.document;
+    const charts = wpcharts.init(document.body, {
+        request: req,
+        response: res,
+        document: document,
+        style: style
+    });
+
+    let hostname = req.body.callback;
+    if(hostname) {
+        hostname = hostname[hostname.length - 1] === '/' ? hostname.substr(0, hostname.length - 1) : hostname;
+    } else {
+        hostname = config.hostname;
+    }
+
+    //http://localhost:8060/logincheck?username=Administrator&password=2a8277faa1cf6f3643d11055589e9073
+    //let login_url = hostname + '/logincheck?username=Administrator&password=2a8277faa1cf6f3643d11055589e9073';
+    let login_url = hostname + '/logincheck?username=' + config.loginname + '&password=' + config.password;
+
+    fetch(login_url, {
+        credentials: 'include',
+    }).then(function (response) {
+        let contentType = response.headers.get('content-type');
+        let cookiesArray = response.headers.get('set-cookie');
+
+        if (contentType && contentType.includes('application/json')) {
+            return response.json();
+        } else if (contentType && contentType.includes('text/html')) {
+            let content = response.text();
+            console.log("fetch-login-error-data:", content);
+            return content;
+        } else {
+            let content = response.text();
+            console.log("fetch-login-error-data:", content);
+            return content;
+        }
+    }).then(function (data) {
+        //console.log(data);
+        //console.log(formurlencoded(req.body));
+
+        let url = hostname + "/business/basic/datamanage/processLine";
+        console.log(formurlencoded(req.body));
+
+        charts.setOption({
+            type: 'hydrograph',
+            url: url,
+            request: {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Cookie': "JSESSIONID=" + data.jsessionid,
+                    'token': data.token,
+                },
+                body: req.body,
+            }
+        });
+    }).catch(function (error) {
+        console.log('error-login:', error);
+    });
+
+    //res.statusCode = 200;//Promise
+    //res.setHeader('Content-Type', 'image/svg+xml');
+    //res.send(document.body.innerHTML);
+});
+
+app.all('/:chartsType/:outputFormat', function (req, res) {
+    let {chartsType, outputFormat}=req.params;
+
+    const dom = new jsdom.JSDOM();
+    const document = dom.window.document;
+    const charts = wpcharts.init(document.body, {
+        request: req,
+        response: res,
+        document: document,
+        style: style
+    });
+
+    let hostname = req.body.callback;
+    if(hostname) {
+        hostname = hostname[hostname.length - 1] === '/' ? hostname.substr(0, hostname.length - 1) : hostname;
+    } else {
+        hostname = config.hostname;
+    }
+
+    let login_url = hostname + '/logincheck?username=' + config.loginname + '&password=' + config.password;
+
+    fetch(login_url, {
+        credentials: 'include',
+    }).then(function (response) {
+        let contentType = response.headers.get('content-type');
+        let cookiesArray = response.headers.get('set-cookie');
+
+        if (contentType && contentType.includes('application/json')) {
+            return response.json();
+        } else if (contentType && contentType.includes('text/html')) {
+            let content = response.text();
+            console.log("fetch-login-error-data:", content);
+            return content;
+        } else {
+            let content = response.text();
+            console.log("fetch-login-error-data:", content);
+            return content;
+        }
+    }).then(function (data) {
+        let url = hostname + "business/basic/datamanage/processLine";
+        console.log(formurlencoded(req.query));
+
+        charts.setOption({
+            type: chartsType,
+            url: url,
+            request: {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Cookie': "JSESSIONID=" + data.jsessionid,
+                    'token': data.token,
+                },
+                body: req.query,
+            }
+        }, function () {
+            let svg = charts.outputSvg();
+            if(outputFormat === 'svg') {
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'image/svg+xml');
+                res.send(svg);
+            } else if(outputFormat === 'png') {
+                svg2png.toBuffer(svg, (data) => {
+                    res.statusCode = 200;
+                    res.setHeader("Content-Type", "image/png");
+                    //res.setHeader("Content-Disposition", "attachment;filename=wpcharts.png");
+                    res.end(data);
+                });
+            } else if(outputFormat === 'emf') {
+
+            }
+        });
+
+    }).catch(function (error) {
+        console.log('error-login:', error);
+    });
+
+    //res.send(req.params);
+});
+
+function f() {
+    //var url = "http://localhost:8082/d3/d3-v5.9.7/sky2-data.json";
+    let url = hostname + "/business/basic/datamanage/processLine";
+    fetch(url, {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Cookie': "JSESSIONID=" + data.jsessionid,
+            'token': data.token,
+        },
+        body: formurlencoded(req.body),
+    }).then(function (response) {
+        let contentType = response.headers.get('content-type');
+        let cookiesArray = response.headers.get('set-cookie');
+
+        if (contentType && contentType.includes('application/json')) {
+            return response.json();
+        } else if (contentType && contentType.includes('text/html')) {
+            let content = response.text();
+            console.log("fetch-login-error-data:", content);
+            return content;
+        } else {
+            let content = response.text();
+            console.log("fetch-login-error-data:", content);
+            return content;
+        }
+    }).then(function (data) {
+        console.log(data);
+    });
+}
+
+/*
+http://127.0.0.1:8888/hydrograph/svg?physical=%5B%7B%22COMP01%22%3A%22%E9%A2%91%E6%A8%A1%28Hz%C2%B2%2F1000%29%22%2C%22COMP08%22%3A%22%E6%B8%A9%E5%BA%A6%28%E2%84%83%29%22%2C%22COMP09%22%3A%22%E7%9B%B8%E5%AF%B9%E4%BD%8D%E7%A7%BB%28mm%29%22%2C%22COMP10%22%3A%22%E7%BB%9D%E5%AF%B9%E4%BD%8D%E7%A7%BB%28mm%29%22%7D%5D&ids=AD0400BY3MX3022&dateNum=&starttime=2017-08-21&endtime=2019-08-21
+
+*/

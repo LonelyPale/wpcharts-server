@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>
+        Canvas Example
+    </title>
+    <script type="text/javascript">
+        function loader() {
+            var canvas = document.getElementById('canvas');
+            var canvas1 = canvas.getContext('2d');
+// Rectangles
+            canvas1.fillStyle = "rgba(0, 0, 200, 1)";
+            canvas1.fillRect(30, 30, 75, 70);
+            canvas1.font = 'italic 40px sans-serif';
+            canvas1.strokeText("Hello!", 50, 50);
+        }
+    </script>
+</head>
+<body onload="loader()">
+<h1>Canvas Example</h1>
+<canvas id="canvas" width="300" height="300">
+</canvas>
+</body>
+</html>

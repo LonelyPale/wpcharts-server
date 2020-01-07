@@ -1,0 +1,146 @@
+[2020-01-06T22:55:53.284] [INFO] default - cacheTimer - 600s: 2020-01-06 22:55:53
+[2020-01-06T22:55:53.287] [INFO] default - loging: start
+[2020-01-06T22:55:53.291] [INFO] default - Server running at http://192.168.199.100:8888/
+[2020-01-06T23:01:50.880] [INFO] default - cacheTimer - 600s: 2020-01-06 23:01:50
+[2020-01-06T23:01:50.886] [INFO] default - loging: start
+[2020-01-06T23:01:50.890] [INFO] default - Server running at http://192.168.199.100:8888/
+[2020-01-06T23:11:50.916] [INFO] default - 
+[2020-01-06T23:11:50.925] [INFO] default - ===== ===== cacheTimer-start: 2020-01-06 23:11:50 ===== =====
+[2020-01-06T23:11:50.929] [INFO] default - ===== ===== cacheTimer-end:   2020-01-06 23:11:50 ===== =====
+[2020-01-06T23:17:19.891] [INFO] default - POST /image/svg/png?img=http://127.0.0.1:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E9%80%9A%E7%94%A8%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 18062ms
+[2020-01-06T23:18:10.208] [INFO] default - POST /image/svg/png?img=http://127.0.0.1:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E6%B8%97%E5%8E%8B%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 750ms
+[2020-01-06T23:21:50.936] [INFO] default - 
+[2020-01-06T23:21:50.946] [INFO] default - ===== ===== cacheTimer-start: 2020-01-06 23:21:50 ===== =====
+[2020-01-06T23:21:50.950] [INFO] default - ===== ===== cacheTimer-end:   2020-01-06 23:21:50 ===== =====
+[2020-01-07T01:40:52.505] [INFO] default - POST /image/svg/png 200 870ms
+[2020-01-07T01:41:06.244] [INFO] default - POST /image/svg/emf 200 2527ms
+[2020-01-07T01:41:40.316] [INFO] default - 
+[2020-01-07T01:41:40.352] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 01:41:40 ===== =====
+[2020-01-07T01:41:40.378] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 01:41:40 ===== =====
+[2020-01-07T01:46:55.616] [INFO] default - POST /image/svg/png 200 978ms
+[2020-01-07T01:47:15.834] [INFO] default - POST /image/svg/emf 200 1326ms
+[2020-01-07T01:49:37.927] [INFO] default - POST /image/svg/emf 200 1229ms
+[2020-01-07T01:50:00.650] [INFO] default - POST /image/svg/emf?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E6%B8%97%E5%8E%8B%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 2247ms
+[2020-01-07T01:51:12.070] [INFO] default - POST /image/svg/emf?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E9%80%9A%E7%94%A8%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 1783ms
+[2020-01-07T01:51:40.342] [INFO] default - 
+[2020-01-07T01:51:40.357] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 01:51:40 ===== =====
+[2020-01-07T01:51:40.362] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 01:51:40 ===== =====
+[2020-01-07T01:57:59.653] [INFO] default - POST /image/svg/emf?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E6%B8%97%E5%8E%8B%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 1857ms
+[2020-01-07T01:59:27.860] [INFO] default - POST /image/svg/emf?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E9%80%9A%E7%94%A8%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 1021ms
+[2020-01-07T02:01:40.367] [INFO] default - 
+[2020-01-07T02:01:40.370] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 02:01:40 ===== =====
+[2020-01-07T02:01:40.373] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 02:01:40 ===== =====
+[2020-01-07T02:04:30.691] [INFO] default - cacheTimer - 600s: 2020-01-07 02:04:30
+[2020-01-07T02:04:30.695] [INFO] default - loging: start
+[2020-01-07T02:04:30.697] [INFO] default - Server running at http://192.168.199.100:8888/
+[2020-01-07T02:04:54.958] [INFO] default - POST /image/svg/emf?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E6%B8%97%E5%8E%8B%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 4090ms
+[2020-01-07T02:06:22.331] [INFO] default - POST /image/svg/emf?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E9%80%9A%E7%94%A8%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 880ms
+[2020-01-07T02:14:30.722] [INFO] default - 
+[2020-01-07T02:14:30.727] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 02:14:30 ===== =====
+[2020-01-07T02:14:30.731] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 02:14:30 ===== =====
+[2020-01-07T02:24:30.750] [INFO] default - 
+[2020-01-07T02:24:30.751] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 02:24:30 ===== =====
+[2020-01-07T02:24:30.752] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 02:24:30 ===== =====
+[2020-01-07T02:26:33.265] [INFO] default - POST /image/svg/png 200 891ms
+[2020-01-07T02:27:01.946] [INFO] default - POST /image/svg/emf?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E6%B8%97%E5%8E%8B%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 2003ms
+[2020-01-07T02:27:04.482] [INFO] default - POST /image/svg/emf?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E9%80%9A%E7%94%A8%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 738ms
+[2020-01-07T02:27:46.363] [INFO] default - POST /image/svg/png?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E9%80%9A%E7%94%A8%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 821ms
+[2020-01-07T02:27:59.711] [INFO] default - POST /image/svg/png?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E6%B8%97%E5%8E%8B%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 676ms
+[2020-01-07T02:28:37.242] [INFO] default - POST /image/svg/emf 200 916ms
+[2020-01-07T02:30:00.937] [INFO] default - cacheTimer - 600s: 2020-01-07 02:30:00
+[2020-01-07T02:30:00.940] [INFO] default - loging: start
+[2020-01-07T02:30:00.942] [INFO] default - Server running at http://192.168.199.100:8888/
+[2020-01-07T02:30:43.727] [INFO] default - POST /image/svg/png?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E6%B8%97%E5%8E%8B%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 618ms
+[2020-01-07T02:31:00.784] [INFO] default - POST /image/svg/png?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E9%80%9A%E7%94%A8%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 487ms
+[2020-01-07T02:31:32.023] [INFO] default - POST /image/svg/png?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E9%80%9A%E7%94%A8%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 496ms
+[2020-01-07T02:35:44.860] [INFO] default - POST /image/svg/png?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E9%80%9A%E7%94%A8%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 513ms
+[2020-01-07T04:16:10.927] [INFO] default - cacheTimer - 600s: 2020-01-07 04:16:10
+[2020-01-07T04:16:10.932] [INFO] default - loging: start
+[2020-01-07T04:16:10.934] [INFO] default - Server running at http://192.168.199.100:8888/
+[2020-01-07T04:16:27.850] [INFO] default - POST /image/svg/emf?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E6%B8%97%E5%8E%8B%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 1977ms
+[2020-01-07T04:16:40.064] [INFO] default - POST /image/svg/emf?img=http://192.168.199.100:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E9%80%9A%E7%94%A8%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 1018ms
+[2020-01-07T04:26:10.939] [INFO] default - 
+[2020-01-07T04:26:10.942] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 04:26:10 ===== =====
+[2020-01-07T04:26:10.944] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 04:26:10 ===== =====
+[2020-01-07T04:36:10.974] [INFO] default - 
+[2020-01-07T04:36:10.975] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 04:36:10 ===== =====
+[2020-01-07T04:36:10.977] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 04:36:10 ===== =====
+[2020-01-07T05:24:07.082] [INFO] default - 
+[2020-01-07T05:24:07.135] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 05:24:07 ===== =====
+[2020-01-07T05:24:07.142] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 05:24:07 ===== =====
+[2020-01-07T05:34:07.089] [INFO] default - 
+[2020-01-07T05:34:07.104] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 05:34:07 ===== =====
+[2020-01-07T05:34:07.111] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 05:34:07 ===== =====
+[2020-01-07T05:44:07.120] [INFO] default - 
+[2020-01-07T05:44:07.137] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 05:44:07 ===== =====
+[2020-01-07T05:44:07.148] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 05:44:07 ===== =====
+[2020-01-07T05:54:07.148] [INFO] default - 
+[2020-01-07T05:54:07.156] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 05:54:07 ===== =====
+[2020-01-07T05:54:07.160] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 05:54:07 ===== =====
+[2020-01-07T06:04:07.169] [INFO] default - 
+[2020-01-07T06:04:07.171] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 06:04:07 ===== =====
+[2020-01-07T06:04:07.187] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 06:04:07 ===== =====
+[2020-01-07T06:14:07.207] [INFO] default - 
+[2020-01-07T06:14:07.237] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 06:14:07 ===== =====
+[2020-01-07T06:14:07.249] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 06:14:07 ===== =====
+[2020-01-07T06:24:07.240] [INFO] default - 
+[2020-01-07T06:24:07.257] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 06:24:07 ===== =====
+[2020-01-07T06:24:07.267] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 06:24:07 ===== =====
+[2020-01-07T06:34:07.265] [INFO] default - 
+[2020-01-07T06:34:07.276] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 06:34:07 ===== =====
+[2020-01-07T06:34:07.287] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 06:34:07 ===== =====
+[2020-01-07T06:44:07.304] [INFO] default - 
+[2020-01-07T06:44:07.328] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 06:44:07 ===== =====
+[2020-01-07T06:44:07.338] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 06:44:07 ===== =====
+[2020-01-07T06:54:07.332] [INFO] default - 
+[2020-01-07T06:54:07.343] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 06:54:07 ===== =====
+[2020-01-07T06:54:07.356] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 06:54:07 ===== =====
+[2020-01-07T07:04:07.360] [INFO] default - 
+[2020-01-07T07:04:07.383] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 07:04:07 ===== =====
+[2020-01-07T07:04:07.403] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 07:04:07 ===== =====
+[2020-01-07T07:14:07.388] [INFO] default - 
+[2020-01-07T07:14:07.391] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 07:14:07 ===== =====
+[2020-01-07T07:14:07.399] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 07:14:07 ===== =====
+[2020-01-07T07:24:07.426] [INFO] default - 
+[2020-01-07T07:24:07.444] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 07:24:07 ===== =====
+[2020-01-07T07:24:07.460] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 07:24:07 ===== =====
+[2020-01-07T07:34:07.450] [INFO] default - 
+[2020-01-07T07:34:07.474] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 07:34:07 ===== =====
+[2020-01-07T07:34:07.491] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 07:34:07 ===== =====
+[2020-01-07T07:44:07.479] [INFO] default - 
+[2020-01-07T07:44:07.480] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 07:44:07 ===== =====
+[2020-01-07T07:44:07.494] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 07:44:07 ===== =====
+[2020-01-07T07:54:07.510] [INFO] default - 
+[2020-01-07T07:54:07.511] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 07:54:07 ===== =====
+[2020-01-07T07:54:07.517] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 07:54:07 ===== =====
+[2020-01-07T16:36:58.787] [INFO] default - 
+[2020-01-07T16:36:58.820] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 16:36:58 ===== =====
+[2020-01-07T16:36:58.844] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 16:36:58 ===== =====
+[2020-01-07T16:46:58.810] [INFO] default - 
+[2020-01-07T16:46:58.818] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 16:46:58 ===== =====
+[2020-01-07T16:46:58.830] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 16:46:58 ===== =====
+[2020-01-07T16:56:58.938] [INFO] default - 
+[2020-01-07T16:56:58.945] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 16:56:58 ===== =====
+[2020-01-07T16:56:58.968] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 16:56:58 ===== =====
+[2020-01-07T17:06:58.974] [INFO] default - 
+[2020-01-07T17:06:58.994] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 17:06:58 ===== =====
+[2020-01-07T17:06:59.012] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 17:06:59 ===== =====
+[2020-01-07T17:14:03.858] [INFO] default - cacheTimer - 600s: 2020-01-07 17:14:03
+[2020-01-07T17:14:03.861] [INFO] default - loging: start
+[2020-01-07T17:14:03.862] [INFO] default - Server running at http://192.168.1.25:8888/
+[2020-01-07T17:20:00.604] [INFO] default - POST /image/svg/png?img=http://192.168.1.25:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E6%B8%97%E5%8E%8B%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 1134ms
+[2020-01-07T17:20:40.979] [INFO] default - POST /image/svg/emf?img=http://192.168.1.25:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E6%B8%97%E5%8E%8B%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 97024ms
+[2020-01-07T17:23:42.150] [INFO] default - POST /image/svg/png?img=http://192.168.1.25:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E6%B8%97%E5%8E%8B%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 629ms
+[2020-01-07T17:24:03.909] [INFO] default - 
+[2020-01-07T17:24:03.963] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 17:24:03 ===== =====
+[2020-01-07T17:24:03.979] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 17:24:03 ===== =====
+[2020-01-07T17:25:12.091] [INFO] default - POST /image/svg/emf?img=http://192.168.1.25:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E6%B8%97%E5%8E%8B%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 3343ms
+[2020-01-07T17:25:26.429] [INFO] default - POST /image/svg/png?img=http://192.168.1.25:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E6%B8%97%E5%8E%8B%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 630ms
+[2020-01-07T17:28:30.846] [INFO] default - POST /image/svg/png?img=http://192.168.1.25:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E6%B8%97%E5%8E%8B%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 16946ms
+[2020-01-07T17:32:17.287] [INFO] default - cacheTimer - 600s: 2020-01-07 17:32:17
+[2020-01-07T17:32:17.290] [INFO] default - loging: start
+[2020-01-07T17:32:17.291] [INFO] default - Server running at http://192.168.1.25:8888/
+[2020-01-07T17:32:31.610] [INFO] default - POST /image/svg/png?img=http://192.168.1.25:8082/wpcharts/dist/image/%E5%B8%A6%E8%83%8C%E6%99%AF%E6%B8%97%E5%8E%8B%E5%88%86%E5%B8%83%E5%9B%BE%E5%BA%95%E5%9B%BE.jpg 200 5817ms
+[2020-01-07T17:42:17.388] [INFO] default - 
+[2020-01-07T17:42:17.458] [INFO] default - ===== ===== cacheTimer-start: 2020-01-07 17:42:17 ===== =====
+[2020-01-07T17:42:17.487] [INFO] default - ===== ===== cacheTimer-end:   2020-01-07 17:42:17 ===== =====

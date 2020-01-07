@@ -1,0 +1,39 @@
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+    /*
+    stroke: #ccc;
+    */
+    shape-rendering: crispEdges;/*去掉毛边*/
+}
+.axis text {
+    font-family: sans-serif;
+    font-size: 12px;
+    text-anchor: middle;
+}
+
+.legend rect {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;/*去掉毛边*/
+}
+.legend line {
+    fill: none;
+    /*stroke: black;*/
+    stroke-width: 1px;
+    shape-rendering: crispEdges;/*去掉毛边*/
+}
+.legend text {
+    font-family: sans-serif;
+    font-size: 12px;
+    text-anchor: middle;
+}
+
+/*
+.title {stroke: red;}
+*/
+

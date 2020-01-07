@@ -1,0 +1,20 @@
+Node Image Service Install
+
+1、Java 服务器
+修改 sky2/src/main/resources/application.yml
+
+# Image Service node convert 图像服务: 生成 svg、png、emf
+ImageService:
+  node: http://127.0.0.1:8888
+
+修改为 node 图像服务器的 ip 和 port
+
+2、Node 服务器
+修改 sky2-nodejs/src/config.js
+
+//# sky2 服务
+const hostname = 'http://192.168.1.149:9090/'; // sky2 服务器
+const loginname = 'AdminDXGLC'; //sky2 帐号
+const password = md5.update('Admin123456DX').digest('hex'); // sky2 密码
+
+修改为 java 服务器的 ip 和 port，还有可登录查询数据的帐号和密码。
