@@ -1,0 +1,11 @@
+npm install canvas
+npm uninstall canvas
+
+npm install svg-to-pdfkit
+npm uninstall svg-to-pdfkit
+
+npm install pako
+npm uninstall pako
+
+npm install serve-static
+npm uninstall serve-static
